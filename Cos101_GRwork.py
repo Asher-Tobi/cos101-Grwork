@@ -49,3 +49,44 @@ if choice == "a":
 
 else:
     print("Sorry, only Hausa translation is available for now.")
+    # Simple English to Igbo Dictionary
+
+igbo_dictionary = {
+    "hello": "ndewo",
+    "food": "nri",
+    "water": "mmiri",
+    "house": "ulo",
+    "child": "nwa",
+    "man": "nwoke",
+    "woman": "nwanyi",
+    "love": "ihunanya",
+    "come": "bia",
+    "go": "gaa",
+    "good": "oma",
+    "bad": "ojoo",
+    "sun": "anyanwu",
+    "rain": "mmiri ozuzo",
+    "school": "ulo akwukwo",
+    "book": "akwukwo",
+    "money": "ego",
+    "friend": "enyi",
+    "mother": "nne",
+    "father": "nna"
+}
+
+print("Welcome to the English → Igbo Dictionary")
+print("Type an English word to translate it into Igbo.")
+print("Type 'exit' to quit.\n")
+
+while True:
+    word = input("Enter an English word: ").lower()
+
+    if word == "exit":
+        print("Goodbye! Ka omesia.")
+        break
+
+    if word in igbo_dictionary:
+        print(f"Igbo translation: {igbo_dictionary[word]}\n")
+    else:
+        print("Sorry, that word is not in the dictionary.\n")
+
