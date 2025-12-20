@@ -1,0 +1,37 @@
+ef main():
+    translations = {
+        "diam": "Water",
+        "baaba": "Father",
+        "inna": "Mother",
+        "gorko": "Man",
+        "debbo": "Woman",
+        "hokku": "Give",
+        "yar": "Drink",
+        "war": "Come",
+        "yew": "Go",
+        "jami": "Peace",
+        "jaraama": "Thank you",
+        "naggé": "Hello",   # accent preserved in data
+        "lenol": "Lineage",
+        "yiite": "Fire",
+        "sappo": "Ten"
+    
+
+    print("--- Fulfulde to English Dictionary ---")
+    print("Type a Fulfulde word to translate (or 'quit' to exit).")
+    while True:
+        word = input("> ").strip()
+        if not word:
+            continue
+        if word.lower() in ("q", "quit", "exit"):
+            break
+
+        result = translate(word, translations)
+        if result:
+            print(f"The English translation for '{word}' is: {result}")
+        else:
+            suggestions = suggest(word, translations)
+            if suggestions:
+                print(f"Sorry, '{word}' not found. Did you mean: {', '.join(suggestions)}?")
+            else:
+                print(f"Sorry, '{word}' is not in our dictionary yet.")
