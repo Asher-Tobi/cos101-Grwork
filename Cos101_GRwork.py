@@ -1,7 +1,7 @@
 print("a. Hausa")
 print("b. Igbo")
 print("c. Yoruba")
-
+print("d. fulani")
 choice = input("What language do you want to translate to? (a, b, c): ")
 
 # Hausa dictionary
